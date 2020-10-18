@@ -40,7 +40,7 @@ class ConsultaFragment(context: Context, private val principalView: MainActivity
     }
 
     private fun initRecyclerView() {
-        favoritesRecyclerViewFavList.layoutManager = LinearLayoutManager(context)
+        ConsultaRecyclerViewList.layoutManager = LinearLayoutManager(context)
 
 //        val adapter = this.context?.let {
 //            MusicAdapter(

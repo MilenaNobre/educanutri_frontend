@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/backFavoriteFragment"
+    android:id="@+id/bacKConsultaFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black">
+    android:background="@color/colorAccent">
 
     <TextView
-        android:id="@+id/favoritesText"
+        android:id="@+id/ConsultaText"
         android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:fontFamily="@font/caveat_brush"
-        android:text="@string/favoriteText"
+        android:text="@string/consultaText"
         android:textAlignment="center"
-        android:textColor="#fff"
+        android:textColor="@color/colorShape"
         android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,30 +21,29 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/favoritesRecyclerViewFavList"
+        android:id="@+id/ConsultaRecyclerViewList"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/favoritesText" />
+        app:layout_constraintTop_toBottomOf="@+id/ConsultaText" />
 
     <TextView
         android:id="@+id/textToGo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/caveat_brush"
-        android:text="NENHUMA MÚSICA EM SEUS FAVORITOS!"
+        android:text="NENHUMA CARDÁPIO ENCONTRADO!"
         android:textAlignment="center"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/colorShape"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/favoritesRecyclerViewFavList"
-        app:layout_constraintEnd_toStartOf="@+id/favoritesRecyclerViewFavList"
+        app:layout_constraintBottom_toTopOf="@+id/ConsultaRecyclerViewList"
+        app:layout_constraintEnd_toStartOf="@+id/ConsultaRecyclerViewList"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/favoritesRecyclerViewFavList"
-        app:layout_constraintTop_toBottomOf="@+id/favoritesRecyclerViewFavList" />
+        app:layout_constraintStart_toEndOf="@+id/ConsultaRecyclerViewList"
+        app:layout_constraintTop_toBottomOf="@+id/ConsultaRecyclerViewList" />
 
 
 

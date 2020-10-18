@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">educanutri</string>
+    <string name="app_name">EducaNutri</string>
+    <string name="consultaText">Pesquisar Cardápio</string>
 </resources>

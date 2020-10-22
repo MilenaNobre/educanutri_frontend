@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">EducaNutri</string>
     <string name="consultaText">Pesquisar Cardápio</string>
+    <string name="addAlimentoText">Adicionar Alimento</string>
+
+
+
+    <string-array name="arraySpinner">
+        <item>Adicionar Alimento</item>
+        <item>Adicionar Alimento</item>
+        <item>Adicionar Alimento</item>
+    </string-array>
+
+    <string name="maskPreco">NN.NNN,NN</string>
+
 </resources>

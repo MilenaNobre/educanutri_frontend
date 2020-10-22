@@ -1,52 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/backFavoriteFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black">
+    android:background="@color/colorAccent">
+
+    <EditText
+        android:id="@+id/impMagnesio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/inputs"
+        android:ems="10"
+        android:hint="MAGNÉSIO"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/impFerro"
+        app:layout_constraintEnd_toStartOf="@+id/impCarboidratos"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/impLipideos" />
+
+    <EditText
+        android:id="@+id/impZinco"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/inputs"
+        android:ems="10"
+        android:hint="ZINCO"
+        android:inputType="numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/impLipideos"
+        app:layout_constraintTop_toTopOf="@+id/impLipideos" />
+
+    <EditText
+        android:id="@+id/impFerro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/inputs"
+        android:ems="10"
+        android:hint="FERRO"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/Submit"
+        app:layout_constraintEnd_toStartOf="@+id/impCalcio"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/impMagnesio" />
+
+    <EditText
+        android:id="@+id/impLipideos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/inputs"
+        android:ems="10"
+        android:hint="LIPÍDEOS"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/impMagnesio"
+        app:layout_constraintEnd_toStartOf="@+id/impZinco"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inpProteinas" />
 
     <TextView
         android:id="@+id/favoritesText"
-        android:layout_width="411dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/caveat_brush"
-        android:text="@string/favoriteText"
+        android:text="@string/addAlimentoText"
         android:textAlignment="center"
-        android:textColor="#fff"
+        android:textColor="@color/colorShape"
         android:textSize="36sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/alimento"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.49" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/favoritesRecyclerViewFavList"
+    <EditText
+        android:id="@+id/alimento"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/inputs"
+        android:ems="10"
+        android:hint="Nome"
+        app:layout_constraintBottom_toTopOf="@+id/inpPreco"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerGrupo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/favoritesText" />
 
-    <TextView
-        android:id="@+id/textToGo"
+    <Spinner
+        android:id="@+id/spinnerGrupo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/inputs"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toBottomOf="@+id/alimento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/alimento"
+        app:layout_constraintTop_toTopOf="@+id/alimento" />
+
+    <EditText
+        android:id="@+id/inpEnergia"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/inputs"
+        android:ems="10"
+        android:hint="ENERGIA"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/inpPreco"
+        app:layout_constraintTop_toTopOf="@+id/inpPreco" />
+
+    <EditText
+        android:id="@+id/inpPreco"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/inputs"
+        android:ems="10"
+        android:hint="00,00"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/inpProteinas"
+        app:layout_constraintEnd_toStartOf="@+id/inpEnergia"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alimento" />
+
+    <EditText
+        android:id="@+id/inpProteinas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/inputs"
+        android:ems="10"
+        android:hint="PROTEÍNA"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/impLipideos"
+        app:layout_constraintEnd_toStartOf="@+id/impFibras"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inpPreco" />
+
+    <EditText
+        android:id="@+id/impCarboidratos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/inputs"
+        android:ems="10"
+        android:hint="CARBOIDRATO"
+        android:inputType="numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/impMagnesio"
+        app:layout_constraintTop_toTopOf="@+id/impMagnesio" />
+
+    <EditText
+        android:id="@+id/impCalcio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/inputs"
+        android:ems="10"
+        android:hint="CÁLCIO"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toBottomOf="@+id/impFerro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/impFerro"
+        app:layout_constraintTop_toTopOf="@+id/impFerro" />
+
+    <EditText
+        android:id="@+id/impFibras"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/inputs"
+        android:ems="10"
+        android:hint="FIBRAS"
+        android:inputType="numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/inpProteinas"
+        app:layout_constraintTop_toTopOf="@+id/inpProteinas" />
+
+    <Button
+        android:id="@+id/Submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/caveat_brush"
-        android:text="NENHUMA MÚSICA EM SEUS FAVORITOS!"
-        android:textAlignment="center"
-        android:textColor="@color/colorAccent"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/favoritesRecyclerViewFavList"
-        app:layout_constraintEnd_toStartOf="@+id/favoritesRecyclerViewFavList"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/favoritesRecyclerViewFavList"
-        app:layout_constraintTop_toBottomOf="@+id/favoritesRecyclerViewFavList" />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/impFerro" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

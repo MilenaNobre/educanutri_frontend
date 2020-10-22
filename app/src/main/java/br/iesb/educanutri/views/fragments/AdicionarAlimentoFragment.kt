@@ -1,23 +1,25 @@
 package br.iesb.educanutri.views.fragments
 
+//import br.iesb.educanutri.view_model.PlaylistViewModel
+//import br.iesb.educanutri.views.adapter.MusicAdapter
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Spinner
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
 import br.iesb.educanutri.R
-//import br.iesb.educanutri.view_model.PlaylistViewModel
+import br.iesb.educanutri.aux_class.Masks
 import br.iesb.educanutri.views.activities.MainActivity
-//import br.iesb.educanutri.views.adapter.MusicAdapter
 import kotlinx.android.synthetic.main.fragment_adicionar_alimento.*
 
-class AdicionarAlimentoFragment(context: Context, private val principalView: MainActivity) :
-    Fragment() {
+class AdicionarAlimentoFragment (context: Context, private val principalView: MainActivity) : Fragment() {
 
+    private lateinit var grupo: String
 //    private val viewModelP: PlaylistViewModel by lazy {
 //        ViewModelProvider(this).get(PlaylistViewModel::class.java)
 //    }
@@ -34,44 +36,52 @@ class AdicionarAlimentoFragment(context: Context, private val principalView: Mai
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        initRecyclerView()
+        Masks(getString(R.string.maskPreco), inpPreco)
 
-        favoritesList()
+        spinnerFill()
+
     }
 
-    private fun initRecyclerView() {
-        favoritesRecyclerViewFavList.layoutManager = LinearLayoutManager(context)
+    private fun spinnerFill() {
+        //Acha o spinner pelo id
+        val spinner: Spinner = spinnerGrupo
 
-//        val adapter = this.context?.let {
-//            MusicAdapter(
-//                it,
-//                mutableListOf(),
-//                activity,
-//                viewModelP,
-//                "FAVORITE",
-//                "favorites",
-//                null,
-//                principalView,
-//                null
-//            )
-//        }
-//        favoritesRecyclerViewFavList.adapter = adapter
-//
-//        viewModelP.allSongs.observe(viewLifecycleOwner, Observer { music ->
-//            adapter?.musicSet?.clear()
-//            adapter?.musicSet = music.toMutableList()
-//            adapter?.notifyDataSetChanged()
-//
-//            if (adapter?.itemCount == 0) {
-//                textToGo.visibility = View.VISIBLE
-//            } else {
-//                textToGo.visibility = View.GONE
-//            }
-//
-//        })
+        //Cria um array adapter com o array que está no xml de strings
+        context?.let {
+            ArrayAdapter.createFromResource(
+                it,
+                R.array.arraySpinner,
+                android.R.layout.simple_spinner_item
+            ).also { adapter ->
+                //Seta o meio de abertura do spinner: dropdown
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+                //Coloca o adaptador no spinner
+                spinner.adapter = adapter
+            }
+        }
+
+        //Adiciona um listener no spinner
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            //Se nada for selecionado, não faz nada
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                //
+            }
+
+            //Se algo for selecionado, alguns campos vão aparecer. Essa função recebe 4 parametros.
+            //Os que mais importam pra gente são parent que é o adapterview com os itens do spinner
+            // e a posição que é a que o usuário selecionou
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                //Variável que pega o item que o usuário selecionou
+                grupo = parent?.getItemAtPosition(position).toString()
+
+
+            }
+        }
     }
 
-    private fun favoritesList() {
-//        viewModelP.playlist("favorites")
-    }
 }

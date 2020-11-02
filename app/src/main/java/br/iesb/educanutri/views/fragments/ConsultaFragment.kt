@@ -31,15 +31,9 @@ class ConsultaFragment(context: Context, private val principalView: MainActivity
         super.onActivityCreated(savedInstanceState)
 
         initRecyclerView()
-
-        favoritesList()
     }
 
     private fun initRecyclerView() {
         ConsultaRecyclerViewList.layoutManager = LinearLayoutManager(context)
-    }
-
-    private fun favoritesList() {
-//        viewModelP.playlist("favorites")
     }
 }

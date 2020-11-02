@@ -16,7 +16,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logo"
+        android:contentDescription="@string/logo" />
 
     <TextView
         android:id="@+id/textAboutUs"
@@ -24,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
-        android:text="O EDUCANUTRI visa resolver problemas na elaboração de cardápios nutricionais com uma proposta de solução do sistema para fornecer aos usuários gerais um formulário de solicitação de um cardápio nutricional baseado em uma faixa etária, características dos alimentos como a cor, consistência e variedade, e simultaneamente um baixo custo financeiro."
+        android:text="@string/about_us_text"
         android:textAlignment="center"
         android:textColor="@color/principalBlue"
         android:textSize="24sp"
@@ -41,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
-        android:text="Área Privada"
+        android:text="@string/private_area"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/principalBlue"

@@ -34,7 +34,7 @@
         android:id="@+id/textToGo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NENHUM CARDÁPIO ENCONTRADO!"
+        android:text="@string/no_menu_found"
         android:textAlignment="center"
         android:textColor="@color/colorShape"
         android:textSize="30sp"

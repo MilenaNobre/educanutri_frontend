@@ -17,4 +17,27 @@
 
     <string name="maskPreco">NNN,NN</string>
     <string name="value">R$ %1$s</string>
+    <string name="about_us_text">O EDUCANUTRI visa resolver problemas na elaboração de cardápios nutricionais com uma proposta de solução do sistema para fornecer aos usuários gerais um formulário de solicitação de um cardápio nutricional baseado em uma faixa etária, características dos alimentos como a cor, consistência e variedade, e simultaneamente um baixo custo financeiro.</string>
+    <string name="private_area">Área Privada</string>
+    <string name="logo">Logo</string>
+    <string name="calcium">Cálcio</string>
+    <string name="energy">Energia</string>
+    <string name="fiber">Fibra</string>
+    <string name="carbohydrate">Carboidrato</string>
+    <string name="group">Grupo</string>
+    <string name="iron">Ferro</string>
+    <string name="lipids">Lipídeos</string>
+    <string name="zinc">Zinco</string>
+    <string name="protein">Proteína</string>
+    <string name="magnesium">Magnésio</string>
+    <string name="price">Preço</string>
+    <string name="save">Salvar</string>
+    <string name="delete">Excluir</string>
+    <string name="no_menu_found">NENHUM CARDÁPIO ENCONTRADO!</string>
+    <string name="insert_password">Insira sua senha para continuar:</string>
+    <string name="password">Senha</string>
+    <string name="verify">Verificar</string>
+    <string name="name">Nome</string>
+    <string name="no_food_found">Nenhum alimento encontrado</string>
+    <string name="save_food">Salvar alimentos</string>
 </resources>

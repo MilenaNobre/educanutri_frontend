@@ -3,4 +3,5 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorShape">#088074</color>
     <color name="colorAccent">#BAF89F</color>
+    <color name="principalBlue">#23274b</color>
 </resources>

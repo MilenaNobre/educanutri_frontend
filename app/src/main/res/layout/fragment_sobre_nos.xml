@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/backFavoriteFragment"
+    android:id="@+id/backAddFood"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent">
+    android:background="@drawable/background">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/logoAboutUs"
         android:layout_width="212dp"
         android:layout_height="199dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/SobretextView"
+        app:layout_constraintBottom_toTopOf="@+id/textAboutUs"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,19 +19,36 @@
         app:srcCompat="@drawable/logo" />
 
     <TextView
-        android:id="@+id/SobretextView"
+        android:id="@+id/textAboutUs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:text="O EDUCANUTRI visa resolver problemas na elaboração de cardápios nutricionais com uma proposta de solução do sistema para fornecer aos usuários gerais um formulário de solicitação de um cardápio nutricional baseado em uma faixa etária, características dos alimentos como a cor, consistência e variedade, e simultaneamente um baixo custo financeiro."
         android:textAlignment="center"
-        android:textColor="@color/colorShape"
+        android:textColor="@color/principalBlue"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/logoAboutUs" />
+
+    <TextView
+        android:id="@+id/privateArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Área Privada"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/principalBlue"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

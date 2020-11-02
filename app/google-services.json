@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "673652878801",
+    "firebase_url": "https://educanutri-bfb8a.firebaseio.com",
+    "project_id": "educanutri-bfb8a",
+    "storage_bucket": "educanutri-bfb8a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:673652878801:android:1a81245a59418e8ad484f0",
+        "android_client_info": {
+          "package_name": "br.iesb.educanutri"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "673652878801-kl7dk49nv5cmei4qk9lek0fbgmq9cae0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.iesb.educanutri",
+            "certificate_hash": "c9fcc121d8275de564887e0bfab165124a7f3ca0"
+          }
+        },
+        {
+          "client_id": "673652878801-8i2hirk37spjf4b6kjcqvoiqsg1lm6om.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsyNFgllv3DPPcN-WG6mYy5EOpunuDYmY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "673652878801-8i2hirk37spjf4b6kjcqvoiqsg1lm6om.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -18,10 +18,6 @@ import kotlinx.android.synthetic.main.fragment_consulta.*
 class ConsultaFragment(context: Context, private val principalView: MainActivity) :
     Fragment() {
 
-//    private val viewModelP: PlaylistViewModel by lazy {
-//        ViewModelProvider(this).get(PlaylistViewModel::class.java)
-//    }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -41,34 +37,6 @@ class ConsultaFragment(context: Context, private val principalView: MainActivity
 
     private fun initRecyclerView() {
         ConsultaRecyclerViewList.layoutManager = LinearLayoutManager(context)
-
-//        val adapter = this.context?.let {
-//            MusicAdapter(
-//                it,
-//                mutableListOf(),
-//                activity,
-//                viewModelP,
-//                "FAVORITE",
-//                "favorites",
-//                null,
-//                principalView,
-//                null
-//            )
-//        }
-//        favoritesRecyclerViewFavList.adapter = adapter
-//
-//        viewModelP.allSongs.observe(viewLifecycleOwner, Observer { music ->
-//            adapter?.musicSet?.clear()
-//            adapter?.musicSet = music.toMutableList()
-//            adapter?.notifyDataSetChanged()
-//
-//            if (adapter?.itemCount == 0) {
-//                textToGo.visibility = View.VISIBLE
-//            } else {
-//                textToGo.visibility = View.GONE
-//            }
-//
-//        })
     }
 
     private fun favoritesList() {

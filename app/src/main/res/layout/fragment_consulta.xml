@@ -4,17 +4,17 @@
     android:id="@+id/bacKConsultaFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent">
+    android:background="@drawable/background">
 
     <TextView
-        android:id="@+id/ConsultaText"
+        android:id="@+id/titleSearchMenu"
         android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/consultaText"
         android:textAlignment="center"
-        android:textColor="@color/colorShape"
-        android:textSize="36sp"
+        android:textColor="#e8eaf6 "
+        android:textSize="33sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,13 +28,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ConsultaText" />
+        app:layout_constraintTop_toBottomOf="@+id/titleSearchMenu" />
 
     <TextView
         android:id="@+id/textToGo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NENHUMA CARDÁPIO ENCONTRADO!"
+        android:text="NENHUM CARDÁPIO ENCONTRADO!"
         android:textAlignment="center"
         android:textColor="@color/colorShape"
         android:textSize="30sp"
@@ -44,7 +44,6 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/ConsultaRecyclerViewList"
         app:layout_constraintTop_toBottomOf="@+id/ConsultaRecyclerViewList" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

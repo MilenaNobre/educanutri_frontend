@@ -4,13 +4,17 @@
     <string name="addAlimentoText">Adicionar Alimento</string>
 
 
-
     <string-array name="arraySpinner">
-        <item>Adicionar Alimento</item>
-        <item>Adicionar Alimento</item>
-        <item>Adicionar Alimento</item>
+        <item>Acompanhamento Arroz</item>
+        <item>Acompanhamento Feijão</item>
+        <item>Entrada</item>
+        <item>Guarnição</item>
+        <item>Principal</item>
+        <item>Sobremesa</item>
+        <item>Bebida</item>
+        <item>Lanche</item>
     </string-array>
 
-    <string name="maskPreco">NN.NNN,NN</string>
-
+    <string name="maskPreco">NNN,NN</string>
+    <string name="value">R$ %1$s</string>
 </resources>

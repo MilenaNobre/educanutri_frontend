@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".views.fragments.FoodFragment">
+
+
+    <TextView
+        android:id="@+id/fiber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/principalBlue"
+        app:layout_constraintBottom_toBottomOf="@+id/fiberTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fiberTitle"
+        app:layout_constraintTop_toTopOf="@+id/fiberTitle" />
+
+    <TextView
+        android:id="@+id/energy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/principalBlue"
+        app:layout_constraintBottom_toBottomOf="@+id/energyTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/energyTitle"
+        app:layout_constraintTop_toTopOf="@+id/energyTitle" />
+
+    <TextView
+        android:id="@+id/carbohydrate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/principalBlue"
+        app:layout_constraintBottom_toBottomOf="@+id/carbohydrateTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/carbohydrateTitle"
+        app:layout_constraintTop_toTopOf="@+id/carbohydrateTitle" />
+
+    <TextView
+        android:id="@+id/nameFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/groupTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/calciumTitle"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Cálcio"
+        android:textAlignment="center"
+        android:textColor="@color/principalBlue"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/carbohydrateTitle"
+        app:layout_constraintEnd_toStartOf="@+id/calcium"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/priceTitle" />
+
+    <TextView
+        android:id="@+id/energyTitle"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Energia"
+        android:textAlignment="center"
+        android:textColor="@color/principalBlue"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/fiberTitle"
+        app:layout_constraintEnd_toStartOf="@+id/energy"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/carbohydrateTitle" />
+
+    <TextView
+        android:id="@+id/fiberTitle"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Fibra"
+        android:textAlignment="center"
+        android:textColor="@color/principalBlue"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ironTitle"
+        app:layout_constraintEnd_toStartOf="@+id/fiber"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/energyTitle" />
+
+    <TextView
+        android:id="@+id/carbohydrateTitle"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Carboidrato"
+        android:textAlignment="center"
+        android:textColor="@color/principalBlue"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/energyTitle"
+        app:layout_constraintEnd_toStartOf="@+id/carbohydrate"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calciumTitle" />
+
+    <TextView
+        android:id="@+id/groupTitle"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Grupo"
+        android:textAlignment="center"
+        android:textColor="@color/principalBlue"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/priceTitle"
+        app:layout_constraintEnd_toStartOf="@+id/group"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameFood" />
+
+    <TextView
+        android:id="@+id/group"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/principalBlue"
+        app:layout_constraintBottom_toBottomOf="@+id/groupTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/groupTitle"
+        app:layout_constraintTop_toTopOf="@+id/groupTitle"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/ironTitle"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Ferro"
+        android:textAlignment="center"
+        android:textColor="@color/principalBlue"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lipidsTitle"
+        app:layout_constraintEnd_toStartOf="@+id/iron"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fiberTitle" />
+
+    <TextView
+        android:id="@+id/lipidsTitle"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Lipídeos"
+        android:textAlignment="center"
+        android:textColor="@color/principalBlue"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/magnesiumTitle"
+        app:layout_constraintEnd_toStartOf="@+id/lipids"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ironTitle" />
+
+    <TextView
+        android:id="@+id/protein"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/principalBlue"
+        app:layout_constraintBottom_toBottomOf="@+id/proteinTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/proteinTitle"
+        app:layout_constraintTop_toTopOf="@+id/proteinTitle"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/zincTitle"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Zinco"
+        android:textAlignment="center"
+        android:textColor="@color/principalBlue"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/saveFood"
+        app:layout_constraintEnd_toStartOf="@+id/zinc"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/proteinTitle" />
+
+    <TextView
+        android:id="@+id/magnesium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/principalBlue"
+        app:layout_constraintBottom_toBottomOf="@+id/magnesiumTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/magnesiumTitle"
+        app:layout_constraintTop_toTopOf="@+id/magnesiumTitle"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/lipids"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/principalBlue"
+        app:layout_constraintBottom_toBottomOf="@+id/lipidsTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/lipidsTitle"
+        app:layout_constraintTop_toTopOf="@+id/lipidsTitle"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/zinc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/principalBlue"
+        app:layout_constraintBottom_toBottomOf="@+id/zincTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/zincTitle"
+        app:layout_constraintTop_toTopOf="@+id/zincTitle"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/proteinTitle"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Proteína"
+        android:textAlignment="center"
+        android:textColor="@color/principalBlue"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/zincTitle"
+        app:layout_constraintEnd_toStartOf="@+id/protein"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/magnesiumTitle" />
+
+    <TextView
+        android:id="@+id/magnesiumTitle"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Magnésio"
+        android:textAlignment="center"
+        android:textColor="@color/principalBlue"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/proteinTitle"
+        app:layout_constraintEnd_toStartOf="@+id/magnesium"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lipidsTitle" />
+
+    <TextView
+        android:id="@+id/priceTitle"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Preço"
+        android:textAlignment="center"
+        android:textColor="@color/principalBlue"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/calciumTitle"
+        app:layout_constraintEnd_toStartOf="@+id/price"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/groupTitle" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/principalBlue"
+        app:layout_constraintBottom_toBottomOf="@+id/priceTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/priceTitle"
+        app:layout_constraintTop_toTopOf="@+id/priceTitle" />
+
+    <TextView
+        android:id="@+id/calcium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/principalBlue"
+        app:layout_constraintBottom_toBottomOf="@+id/calciumTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/calciumTitle"
+        app:layout_constraintTop_toTopOf="@+id/calciumTitle" />
+
+    <TextView
+        android:id="@+id/iron"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/principalBlue"
+        app:layout_constraintBottom_toBottomOf="@+id/ironTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ironTitle"
+        app:layout_constraintTop_toTopOf="@+id/ironTitle" />
+
+    <Button
+        android:id="@+id/saveFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:text="Salvar"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/deleteFood"
+        app:layout_constraintTop_toBottomOf="@+id/zincTitle" />
+
+    <ImageView
+        android:id="@+id/closeFood"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/ic_letter_x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/deleteFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cancel_button"
+        android:text="Excluir"
+        app:layout_constraintBottom_toBottomOf="@+id/saveFood"
+        app:layout_constraintEnd_toStartOf="@+id/saveFood"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/saveFood" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

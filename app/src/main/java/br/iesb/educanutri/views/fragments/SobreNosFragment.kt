@@ -21,10 +21,18 @@ class SobreNosFragment(context: Context, private val principalView: MainActivity
         return inflater.inflate(R.layout.fragment_sobre_nos, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
+        privateArea.setOnClickListener { checkPassword() }
     }
 
+    private fun checkPassword() {
+        val fragment = CheckPasswordDialogFragment()
 
+        val manager = activity?.supportFragmentManager
+        val transaction = manager?.beginTransaction()
+        transaction?.add(fragment, "checkPassword")
+        transaction?.commit()
+    }
 }

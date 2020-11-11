@@ -1,6 +1,8 @@
 package br.iesb.educanutri.views.activities
 
+import android.content.ContentValues
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -31,10 +33,14 @@ class PrivateAreaActivity : AppCompatActivity() {
         recyclerViewPrivateArea.adapter = adapter
 
         pViewModel.foods.observe(this, Observer { foods ->
+            adapter.foodSet.clear()
             adapter.foodSet = foods
             adapter.notifyDataSetChanged()
+
             if (adapter.itemCount == 0) {
                 foodNotFound.visibility = View.VISIBLE
+            } else {
+                foodNotFound.visibility = View.GONE
             }
         })
 

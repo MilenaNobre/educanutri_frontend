@@ -48,6 +48,8 @@ class PrincipalRepository(context: Context) {
             }
 
             override fun onDataChange(snapshot: DataSnapshot) {
+                foods.clear()
+
                 val list = snapshot.children
 
                 list.forEach { snap ->

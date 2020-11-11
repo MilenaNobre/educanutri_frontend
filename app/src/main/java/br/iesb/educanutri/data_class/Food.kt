@@ -15,3 +15,11 @@ data class Food(
     val calcium: Double? = null,
     var id: String? = null
 )
+
+data class Plate(
+    val color: Int? = null,
+    val id: Int? = null,
+    val name: String? =null,
+    val type: Int? = null,
+    val consistence: Int? = null
+)

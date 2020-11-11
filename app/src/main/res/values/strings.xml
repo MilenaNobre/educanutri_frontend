@@ -30,14 +30,16 @@
     <string name="zinc">Zinco</string>
     <string name="protein">Proteína</string>
     <string name="magnesium">Magnésio</string>
-    <string name="price">Preço</string>
     <string name="save">Salvar</string>
     <string name="delete">Excluir</string>
-    <string name="no_menu_found">NENHUM CARDÁPIO ENCONTRADO!</string>
+    <string name="no_menu_found">Nenhum cardápio encontrado. Efetue uma nova pesquisa!</string>
     <string name="insert_password">Insira sua senha para continuar:</string>
     <string name="password">Senha</string>
     <string name="verify">Verificar</string>
     <string name="name">Nome</string>
     <string name="no_food_found">Nenhum alimento encontrado</string>
     <string name="save_food">Salvar alimentos</string>
+    <string name="amount">Quantidade</string>
+    <string name="price">Preço</string>
+    <string name="search">Pesquisar</string>
 </resources>

@@ -1,8 +1,6 @@
 package br.iesb.educanutri.view_model
 
 import android.app.Application
-import android.content.ContentValues
-import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import br.iesb.educanutri.data_class.Food

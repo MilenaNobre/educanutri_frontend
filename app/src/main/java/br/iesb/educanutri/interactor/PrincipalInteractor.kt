@@ -5,7 +5,7 @@ import br.iesb.educanutri.data_class.Food
 import br.iesb.educanutri.repository.PrincipalRepository
 
 class PrincipalInteractor(context: Context) {
-    private val repository = PrincipalRepository(context)
+    private val repository = PrincipalRepository(context, "https://ameless-0563456123.herokuapp.com/")
 
     fun saveNewFood(
         name: String,
@@ -53,10 +53,18 @@ class PrincipalInteractor(context: Context) {
         if (password.isEmpty()) {
             callback("EMPTY")
         } else {
-            repository.checkPassword(password) { response ->
-                if (response == password) {
-                    callback("OK")
-                } else {
+            repository.checkPassword { response ->
+                var verification = 0
+
+                response.forEach { dbPass ->
+                    if (dbPass == password) {
+                        callback("OK")
+
+                        verification++
+                    }
+                }
+
+                if (verification == 0) {
                     callback("WRONG")
                 }
             }

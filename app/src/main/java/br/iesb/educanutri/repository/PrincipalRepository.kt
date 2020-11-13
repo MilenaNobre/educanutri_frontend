@@ -7,8 +7,9 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
-class PrincipalRepository(context: Context) {
+class PrincipalRepository(private val context: Context, url: String) : Retrofit(context, url) {
     private val database = FirebaseDatabase.getInstance()
+    private val service = retrofit.create(GeneticService::class.java)
 
     fun saveNewFood(
         food: Food
@@ -18,7 +19,7 @@ class PrincipalRepository(context: Context) {
         reference.push().setValue(food)
     }
 
-    fun checkPassword(password: String, callback: (String?) -> Unit) {
+    fun checkPassword(callback: (Array<String?>) -> Unit) {
         val query = database.getReference("password")
 
         query.addListenerForSingleValueEvent(object : ValueEventListener {
@@ -27,12 +28,14 @@ class PrincipalRepository(context: Context) {
 
             override fun onDataChange(snapshot: DataSnapshot) {
                 val list = snapshot.children
+                val allPass = mutableListOf<String?>()
 
                 list.forEach { snap ->
                     val value = snap.getValue(String::class.java)
 
-                    callback(value)
+                    allPass.add(value)
                 }
+                callback(allPass.toTypedArray())
             }
 
         })

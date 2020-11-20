@@ -54,7 +54,7 @@ git checkout master
 
 ## REPOSITÓRIO BACK-END
 
-<p align="justify"><a href="https://github.com/deborahohanne/educanutri_back"> EDUCANUTRI - BACK-END </a> </p>
+<p align="justify"><a href="https://github.com/MilenaNobre/educanutri_frontend"> EDUCANUTRI - BACK-END </a> </p>
 
 ## DESENVOLVEDORES
 <p align="justify"> :octocat: <a href="https://github.com/deborahohanne"> Deborah Ohanne </a> </p>

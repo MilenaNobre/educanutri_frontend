@@ -9,7 +9,7 @@
 
 <p align="justify"> A finalidade da aplicação é minimizar o erro nutricional e facilitar o trabalho dos nutricionistas no gerenciamento dos cardápios nutricionais para alimentação escolar, o EDUCANUTRI fornecerá pratos que buscam a melhor combinação para a elaboração do cardápio. </p>
 
-<p align="justify"> O EDUCANUTRI visa resolver problemas na elaboração de cardápios nutricionais com uma proposta de solução do sistema para fornecer aos usuários gerais um formulário de solicitação de um cardápio nutricional baseado em uma faixa etária, características dos alimentos como a cor, consistência e variedade, e simultaneamente um baixo custo financeiro. </p>
+<p align="justify"> O EDUCANUTRI visa resolver problemas na elaboração de cardápios nutricionais com uma proposta de solução do sistema para fornecer aos usuários gerais um formulário de solicitação de um cardápio nutricional baseado em uma faixa etária, características dos alimentos como variedade e um baixo custo financeiro. </p>
 
 ## FERRAMENTAS
 

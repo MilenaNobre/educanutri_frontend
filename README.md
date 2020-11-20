@@ -15,8 +15,7 @@
 
 <ul>
    <li><b>Linguagem:</b> Kotlin</li>
-   <li><b>Arquitetura:</b> MVVMI (Model – View – View Model - interactor) </li>
-   <li><b>Armazenamento de dados: - </li>   
+   <li><b>Arquitetura:</b> MVVMI (Model – View – View Model - interactor) </li> 
 </ul>
 
 ## COMO RODAR A APLICAÇÃO 
@@ -27,7 +26,7 @@
 1. Clone o repositório:
 
 ```
-git clone https://github.com/MilenaNobre/Songs.git
+git clone https://github.com/MilenaNobre/educanutri_frontend.git
 ```
 
 2. Esta etapa garante que você esteja na ramificação principal. 
@@ -38,7 +37,7 @@ git checkout master
 
 <b>Nota:</b> Se você desejar alterar para uma ramificação(Branch) diferente, substitua "master" pelo nome da ramificação(Branch) que deseja visualizar.
 
-3. Por fim, abra o diretório Songs/ no Android Studio.
+3. Por fim, abra o diretório educanutri_frontend/ no Android Studio.
 
 ### Configurar um dispositivo para execução do aplicativo
 

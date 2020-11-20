@@ -16,6 +16,7 @@
 <ul>
    <li><b>Linguagem:</b> Kotlin</li>
    <li><b>Arquitetura:</b> MVVMI (Model – View – View Model - interactor) </li> 
+   <li><b>API:</b> <a href="https://ameless-0563456123.herokuapp.com/docs"> API-EDUCANUTRI </a></li> 
 </ul>
 
 ## COMO RODAR A APLICAÇÃO 

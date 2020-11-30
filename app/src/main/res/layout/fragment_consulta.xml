@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/bacKConsultaFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -17,7 +18,7 @@
         android:textColor="@color/principalBlue"
         android:textSize="33sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/amountSeachMenu"
+        app:layout_constraintBottom_toTopOf="@+id/amountDaysSearchMenu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,25 +32,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/noMenuFound" />
+        app:layout_constraintTop_toBottomOf="@+id/seeMore" />
 
     <EditText
-        android:id="@+id/amountSeachMenu"
+        android:id="@+id/amountDaysSearchMenu"
         android:layout_width="0dp"
         android:layout_height="35dp"
-        android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="30dp"
         android:background="@drawable/inputs"
         android:ems="10"
-        android:hint="@string/amount"
+        android:hint="@string/days"
         android:importantForAutofill="no"
-        android:inputType="textPersonName"
+        android:inputType="number"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/searchMenu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/qtdPopulationSearch"
         app:layout_constraintTop_toBottomOf="@+id/titleSearchMenu" />
 
     <Button
@@ -62,11 +64,11 @@
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/noMenuFound"
+        app:layout_constraintBottom_toTopOf="@+id/loadingSearch"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/amountSeachMenu" />
+        app:layout_constraintTop_toBottomOf="@+id/amountDaysSearchMenu" />
 
     <TextView
         android:id="@+id/noMenuFound"
@@ -80,11 +82,58 @@
         android:textColor="@color/principalBlue"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/seeMore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loadingSearch" />
+
+    <EditText
+        android:id="@+id/qtdPopulationSearch"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/inputs"
+        android:ems="10"
+        android:hint="@string/qtdPopulation"
+        android:inputType="number"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/amountDaysSearchMenu"
+        app:layout_constraintEnd_toStartOf="@+id/amountDaysSearchMenu"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/amountDaysSearchMenu" />
+
+    <ImageView
+        android:id="@+id/loadingSearch"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/noMenuFound"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchMenu"
+        app:srcCompat="@drawable/loading" />
+
+    <TextView
+        android:id="@+id/seeMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="@string/slideToSeeMore"
+        android:textAlignment="center"
+        android:textColor="@color/principalBlue"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/recyclerViewConsulta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchMenu" />
+        app:layout_constraintTop_toBottomOf="@+id/noMenuFound" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

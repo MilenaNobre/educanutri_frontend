@@ -1,5 +1,7 @@
 package br.iesb.educanutri.repository
 
+import com.google.gson.annotations.SerializedName
+
 data class FoodDTO(
     var id: Int? = null,
     val valor: Double? = null,
@@ -16,10 +18,6 @@ data class FoodDTO(
     val grupo: Double? = null
 )
 
-data class BreakfastSnackDTO(
-    val foods: Array<FoodDTO>? = null
-)
-
 data class PlateDTO(
     val cor: Int? = null,
     val id: Int? = null,
@@ -28,16 +26,16 @@ data class PlateDTO(
     val consistencia: Int? = null
 )
 
-data class LunchDTO(
-    val plates: Array<PlateDTO>? = null
-)
-
 data class DayMenuDTO(
-    val breakfast: BreakfastSnackDTO? = null,
-    val lunch: LunchDTO? = null,
-    val snack: BreakfastSnackDTO? = null
+    @SerializedName("desjejum")
+    val breakfast: Array<FoodDTO>? = null,
+    @SerializedName("almoco")
+    val lunch: Array<PlateDTO>? = null,
+    @SerializedName("lanche")
+    val snack: Array<FoodDTO>? = null
 )
 
 data class GeneticDTO(
-    val menus: Array<DayMenuDTO>? = null
+    @SerializedName("resultado")
+    val menus: Array<Array<DayMenuDTO>>? = null
 )

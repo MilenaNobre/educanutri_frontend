@@ -42,4 +42,11 @@
     <string name="amount">Quantidade</string>
     <string name="price">Preço</string>
     <string name="search">Pesquisar</string>
+    <string name="valueName">Valor</string>
+    <string name="days">Dias</string>
+    <string name="qtdPopulation">Qtd População</string>
+    <string name="breakfast">Café da manhã</string>
+    <string name="lunch">Almoço</string>
+    <string name="snack">Lanche</string>
+    <string name="slideToSeeMore">Deslize para ver todos os resultados</string>
 </resources>

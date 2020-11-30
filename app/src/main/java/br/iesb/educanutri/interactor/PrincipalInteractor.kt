@@ -2,10 +2,12 @@ package br.iesb.educanutri.interactor
 
 import android.content.Context
 import br.iesb.educanutri.data_class.Food
+import br.iesb.educanutri.repository.GeneticDTO
 import br.iesb.educanutri.repository.PrincipalRepository
 
 class PrincipalInteractor(context: Context) {
-    private val repository = PrincipalRepository(context, "https://ameless-0563456123.herokuapp.com/")
+    private val repository =
+        PrincipalRepository(context, "https://educanutri.herokuapp.com/")
 
     fun saveNewFood(
         name: String,
@@ -79,5 +81,13 @@ class PrincipalInteractor(context: Context) {
         repository.deleteFood(id)
 
         callback("OK")
+    }
+
+    fun geneticAlgorithm(tam_pop: String, qtd_days: String, callback: (GeneticDTO?) -> Unit) {
+        if (tam_pop.isEmpty() || qtd_days.isEmpty()) {
+            callback(null)
+        } else {
+            repository.geneticAlgorithm(tam_pop.toInt(), qtd_days.toInt(), callback)
+        }
     }
 }

@@ -5,10 +5,12 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import br.iesb.educanutri.data_class.Food
 import br.iesb.educanutri.interactor.PrincipalInteractor
+import br.iesb.educanutri.repository.DayMenuDTO
 
 class PrincipalViewModel(app: Application) : AndroidViewModel(app) {
     private val interactor = PrincipalInteractor(app.applicationContext)
     val foods = MutableLiveData<MutableList<Food>>()
+    val geneticResults = MutableLiveData<MutableList<DayMenuDTO>>()
 
     fun saveNewFood(
         name: String,
@@ -83,6 +85,18 @@ class PrincipalViewModel(app: Application) : AndroidViewModel(app) {
             if (response == "OK") {
                 callback(arrayOf("OK", "Alimento excluído com sucesso!"))
             }
+        }
+    }
+
+    fun geneticAlgorithm(tam_pop: String, qtd_days: String) {
+        interactor.geneticAlgorithm(tam_pop, qtd_days) { result ->
+            val menus = mutableListOf<DayMenuDTO>()
+            result?.menus?.forEach { dayMenuArray ->
+                dayMenuArray.forEach { dayMenu ->
+                    menus.add(dayMenu)
+                }
+            }
+            geneticResults.value = menus
         }
     }
 }
